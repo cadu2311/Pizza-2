@@ -6,14 +6,14 @@
     <title>Margherita Trattoria e Pizzaria | Cardápio Digital</title>
     <style>
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --primary: #d32f2f;
+            --bg-color: #0f0f0f;
+            --card-bg: #1a1a1a;
+            --primary: #c62828;
             --primary-hover: #b71c1c;
-            --accent: #ffd700;
-            --text: #e0e0e0;
-            --text-muted: #9e9e9e;
-            --border: #333333;
+            --accent: #fbc02d;
+            --text: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --border: #2c2c2c;
         }
 
         * {
@@ -30,8 +30,8 @@
         }
 
         header {
-            background: linear-gradient(135deg, #1a1a1a, #2d1515);
-            padding: 20px;
+            background: linear-gradient(135deg, #141414, #2a1212);
+            padding: 25px 15px;
             text-align: center;
             border-bottom: 3px solid var(--primary);
             position: sticky;
@@ -41,7 +41,7 @@
 
         header h1 {
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 5px;
         }
 
@@ -55,9 +55,9 @@
             background: #2e7d32;
             color: #fff;
             font-size: 0.75rem;
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 12px;
-            margin-top: 6px;
+            margin-top: 8px;
             font-weight: bold;
         }
 
@@ -98,14 +98,6 @@
             color: #fff;
         }
 
-        h2.section-title {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin: 20px 0 10px 0;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 5px;
-        }
-
         .menu-grid {
             display: grid;
             gap: 12px;
@@ -114,7 +106,7 @@
         .menu-item {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -128,7 +120,7 @@
 
         .item-info {
             flex: 1;
-            padding-right: 10px;
+            padding-right: 12px;
         }
 
         .item-info h3 {
@@ -153,8 +145,8 @@
             background: var(--primary);
             color: #fff;
             border: none;
-            padding: 8px 12px;
-            border-radius: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: bold;
             font-size: 0.85rem;
@@ -170,13 +162,13 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: #1a1a1a;
+            background: #181818;
             border-top: 2px solid var(--primary);
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.6);
             z-index: 101;
         }
 
@@ -205,7 +197,7 @@
             display: none;
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             z-index: 200;
             justify-content: center;
             align-items: flex-end;
@@ -266,7 +258,7 @@
         .form-group input, .form-group select {
             width: 100%;
             padding: 10px;
-            background: #2b2b2b;
+            background: #252525;
             border: 1px solid var(--border);
             color: #fff;
             border-radius: 6px;
@@ -303,15 +295,15 @@
             <button class="cat-btn" onclick="filtrarCat('massas')">Massas</button>
             <button class="cat-btn" onclick="filtrarCat('risotos')">Risotos</button>
             <button class="cat-btn" onclick="filtrarCat('entradas')">Entradas & Porções</button>
-            <button class="cat-btn" onclick="filtrarCat('outros')">Outros / Rodízio</button>
+            <button class="cat-btn" onclick="filtrarCat('outros')">Rodízio</button>
         </div>
 
-        <div id="cardapio-container">
+        <div class="menu-grid" id="menuGrid">
             <!-- Pizzas -->
             <div class="menu-item" data-cat="pizzas">
                 <div class="item-info">
                     <h3>Pizza Calabresa</h3>
-                    <p>Molho de tomate artesanal, calabresa fatiada, cebola e azeitonas.</p>
+                    <p>Molho artesanal, calabresa fatiada, cebola e azeitonas.</p>
                     <div class="item-price">R$ 65,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Pizza Calabresa', 65.00)">+ Pedir</button>
@@ -320,7 +312,7 @@
             <div class="menu-item" data-cat="pizzas">
                 <div class="item-info">
                     <h3>Pizza 4 Queijos</h3>
-                    <p>Muzzarella, provolone, gorgonzola e parmesão polvilhado.</p>
+                    <p>Muzzarella, provolone, gorgonzola e parmesão.</p>
                     <div class="item-price">R$ 75,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Pizza 4 Queijos', 75.00)">+ Pedir</button>
@@ -329,7 +321,7 @@
             <div class="menu-item" data-cat="pizzas">
                 <div class="item-info">
                     <h3>Pizza Carne Seca</h3>
-                    <p>Carne seca desfiada temperada, cebola roxa e requeijão cremoso.</p>
+                    <p>Carne seca desfiada, cebola roxa e requeijão cremoso.</p>
                     <div class="item-price">R$ 82,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Pizza Carne Seca', 82.00)">+ Pedir</button>
@@ -338,7 +330,7 @@
             <div class="menu-item" data-cat="pizzas">
                 <div class="item-info">
                     <h3>Pizza Abobrinha com Cream Cheese</h3>
-                    <p>Finas fatias de abobrinha grelhada, cream cheese e toque de parmesão.</p>
+                    <p>Abobrinha grelhada, cream cheese e toque de parmesão.</p>
                     <div class="item-price">R$ 72,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Pizza Abobrinha com Cream Cheese', 72.00)">+ Pedir</button>
@@ -357,7 +349,7 @@
             <div class="menu-item" data-cat="doces">
                 <div class="item-info">
                     <h3>Pizza Sensação ao Leite</h3>
-                    <p>Chocolate ao leite nobre derretido com morangos frescos picados.</p>
+                    <p>Chocolate ao leite nobre com morangos frescos picados.</p>
                     <div class="item-price">R$ 70,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Pizza Sensação ao Leite', 70.00)">+ Pedir</button>
@@ -376,7 +368,7 @@
             <div class="menu-item" data-cat="massas">
                 <div class="item-info">
                     <h3>Macarrão Carbonara</h3>
-                    <p>Massa artesanal italiana, gema fresca, pecorino romano e pancetta crocante[span_0](start_span)[span_0](end_span).</p>
+                    <p>Massa artesanal, gema fresca, pecorino romano e pancetta crocante[span_0](start_span)[span_0](end_span).</p>
                     <div class="item-price">R$ 68,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Macarrão Carbonara', 68.00)">+ Pedir</button>
@@ -385,7 +377,7 @@
             <div class="menu-item" data-cat="massas">
                 <div class="item-info">
                     <h3>Ravioli de Abóbora com Cabotia</h3>
-                    <p>Recheado artesanalmente com cabotiá, servido com molho leve de manteiga e sálvia.</p>
+                    <p>Recheado artesanalmente, servido com molho leve de manteiga e sálvia.</p>
                     <div class="item-price">R$ 74,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Ravioli de Abóbora com Cabotia', 74.00)">+ Pedir</button>
@@ -394,7 +386,7 @@
             <div class="menu-item" data-cat="massas">
                 <div class="item-info">
                     <h3>Gnocchi Matriciais</h3>
-                    <p>Nhoque de batata artesanal ao molho matriciana com tomate e especiarias[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span).</p>
+                    <p>Nhoque de batata artesanal ao molho matriciana[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span).</p>
                     <div class="item-price">R$ 64,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Gnocchi Matriciais', 64.00)">+ Pedir</button>
@@ -404,7 +396,7 @@
             <div class="menu-item" data-cat="risotos">
                 <div class="item-info">
                     <h3>Risoto de Alho-Poró</h3>
-                    <p>Arroz arbóreo cremoso com alho-poró refogado e finalizado com parmesão[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span).</p>
+                    <p>Arroz arbóreo cremoso com alho-poró e parmesão[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span).</p>
                     <div class="item-price">R$ 72,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Risoto de Alho-Poró', 72.00)">+ Pedir</button>
@@ -413,7 +405,7 @@
             <div class="menu-item" data-cat="risotos">
                 <div class="item-info">
                     <h3>Risoto de Palmito</h3>
-                    <p>Arroz arbóreo com pedaços selecionados de palmito fresco e ervas finas[span_5](start_span)[span_5](end_span).</p>
+                    <p>Arroz arbóreo com pedaços selecionados de palmito fresco[span_5](start_span)[span_5](end_span).</p>
                     <div class="item-price">R$ 70,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Risoto de Palmito', 70.00)">+ Pedir</button>
@@ -422,8 +414,8 @@
             <!-- Entradas -->
             <div class="menu-item" data-cat="entradas">
                 <div class="item-info">
-                    <h3>Bolinho de Bacalhau (12 unidades)</h3>
-                    <p>Receita tradicional de casa, servida em molho de alcaparras, azeitonas e aliche[span_6](start_span)[span_6](end_span).</p>
+                    <h3>Bolinho de Bacalhau (12 un.)</h3>
+                    <p>Receita tradicional, servida em molho de alcaparras e azeitonas[span_6](start_span)[span_6](end_span).</p>
                     <div class="item-price">R$ 55,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Bolinho de Bacalhau (12 un)', 55.00)">+ Pedir</button>
@@ -431,8 +423,8 @@
 
             <div class="menu-item" data-cat="entradas">
                 <div class="item-info">
-                    <h3>Bruschetta (4 unidades)</h3>
-                    <p>Fatias de pão italiano preparadas artesanalmente, cobertas com tomate fresco e lascas de queijo[span_7](start_span)[span_7](end_span).</p>
+                    <h3>Bruschetta (4 un.)</h3>
+                    <p>Fatias de pão italiano com tomate fresco e lascas de queijo[span_7](start_span)[span_7](end_span).</p>
                     <div class="item-price">R$ 42,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Bruschetta (4 un)', 42.00)">+ Pedir</button>
@@ -440,8 +432,8 @@
 
             <div class="menu-item" data-cat="entradas">
                 <div class="item-info">
-                    <h3>Coxinha Invertida (12 unidades)</h3>
-                    <p>Coxinha de asas preparada artesanalmente, acompanhada de molho pepper jelly[span_8](start_span)[span_8](end_span).</p>
+                    <h3>Coxinha Invertida (12 un.)</h3>
+                    <p>Coxinha de asas artesanal com molho pepper jelly[span_8](start_span)[span_8](end_span).</p>
                     <div class="item-price">R$ 48,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Coxinha Invertida (12 un)', 48.00)">+ Pedir</button>
@@ -451,7 +443,7 @@
             <div class="menu-item" data-cat="outros">
                 <div class="item-info">
                     <h3>Rodízio de Massas e Pizzas</h3>
-                    <p>Valor por pessoa. Não incluso bebidas. Crianças de 6 a 8 pagam meia[span_9](start_span)[span_9](end_span).</p>
+                    <p>Valor por pessoa. Crianças de 6 a 8 anos pagam meia[span_9](start_span)[span_9](end_span).</p>
                     <div class="item-price">R$ 75,00</div>
                 </div>
                 <button class="btn-add" onclick="adicionarCarrinho('Rodízio Margherita', 75.00)">+ Pedir</button>
@@ -474,9 +466,7 @@
                 <h3>Seu Pedido</h3>
                 <button class="close-modal" onclick="fecharCarrinho()">&times;</button>
             </div>
-            <div class="cart-items-list" id="cartItemsList">
-                <!-- Itens inseridos via JS -->
-            </div>
+            <div class="cart-items-list" id="cartItemsList"></div>
             
             <div class="form-group">
                 <label>Seu Nome:</label>
@@ -485,7 +475,7 @@
             
             <div class="form-group">
                 <label>Endereço de Entrega (ou Retirada):</label>
-                <input type="text" id="clienteEndereco" placeholder="Rua, Número, Bairro (Zona 09, etc)">
+                <input type="text" id="clienteEndereco" placeholder="Rua, Número, Bairro (Ex: Zona 09)">
             </div>
 
             <div class="form-group">
@@ -523,11 +513,7 @@
             document.getElementById('cartTotal').innerText = `R$ ${totalValor.toFixed(2).replace('.', ',')}`;
 
             let cartBar = document.getElementById('cartBar');
-            if (totalItens > 0) {
-                cartBar.style.display = 'flex';
-            } else {
-                cartBar.style.display = 'none';
-            }
+            cartBar.style.display = totalItens > 0 ? 'flex' : 'none';
         }
 
         function abrirCarrinho() {
@@ -605,7 +591,7 @@
 
             texto += `\n💰 *Total a Pagar:* R$ ${totalValor.toFixed(2).replace('.', ',')}`;
 
-            let foneLoja = "5544999999999"; // Substitua pelo número real se tiver
+            let foneLoja = "5544999999999"; 
             let url = `https://api.whatsapp.com/send?phone=${foneLoja}&text=${encodeURIComponent(texto)}`;
             window.open(url, '_blank');
         }
